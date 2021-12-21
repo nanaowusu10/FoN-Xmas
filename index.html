@@ -1,0 +1,463 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 15 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="FoN_Xmas_wishwbs.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="wb.conveyerbelt.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#SlideShow1").conveyerbelt({speed:3, spacing: 5});
+function bubbleTextJavaScript2()
+{
+   var bubbleArray = [];
+   var sizeArray = [4,6,8,10];
+   for (var i = 0; i < $('.bubbles').width(); i++) 
+   {
+      bubbleArray.push(i);
+   }
+   function randomValue(arr) 
+   {
+      return arr[Math.floor(Math.random() * arr.length)];
+  }
+  setInterval(function()
+  {
+     var size = randomValue(sizeArray);
+     $('.bubbles').append('<div class="bubble" style="left: ' + randomValue(bubbleArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+     $('.bubble').animate({ 'bottom': '100%', 'opacity' : '-=0.7' }, 4000, function()
+     {
+        $(this).remove()
+     });
+   }, 350);
+}
+bubbleTextJavaScript2();});
+</script>
+</head>
+<body>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div style="z-index:0">
+<script>
+
+/******************************************
+* Snow Effect Script- By Altan d.o.o. (http://www.altan.hr/snow/index.html)
+* Visit Dynamic Drive DHTML code library (http://www.dynamicdrive.com/) for full source code
+* Last updated Nov 9th, 05' by DD. This notice must stay intact for use
+******************************************/
+  
+var snowsrc="snow.gif"
+var no = 10;
+
+var dx, xp, yp;
+var am, stx, sty;
+var i, doc_width = 800, doc_height = 600; 
+  
+if (typeof window.innerWidth != 'undefined')
+{
+   doc_width = window.innerWidth;
+   doc_height = window.innerHeight;
+}
+else 
+if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0)
+{
+   doc_width = document.documentElement.clientWidth;
+   doc_height = document.documentElement.clientHeight;
+}
+else
+{
+   doc_width = document.getElementsByTagName('body')[0].clientWidth;
+   doc_height = document.getElementsByTagName('body')[0].clientHeight;
+}
+
+dx = new Array();
+xp = new Array();
+yp = new Array();
+am = new Array();
+stx = new Array();
+sty = new Array();
+
+for (i = 0; i < no; ++ i) 
+{  
+   dx[i] = 0;
+   xp[i] = Math.random()*(doc_width-50);
+   yp[i] = Math.random()*doc_height;
+   am[i] = Math.random()*20;
+   stx[i] = 0.02 + Math.random()/10;
+   sty[i] = 0.7 + Math.random();
+
+   if (i == 0) 
+   {
+      document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><a href=\"http://dynamicdrive.com\"><img src='"+snowsrc+"' border=\"0\"><\/a><\/div>");
+   } 
+   else 
+   {
+      document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='"+snowsrc+"' border=\"0\"><\/div>");
+   }
+}
+
+function DoSnow() 
+{
+   for (i = 0; i < no; ++ i) 
+   {
+      yp[i] += sty[i];
+      if (yp[i] > doc_height-50) 
+      {
+         xp[i] = Math.random()*(doc_width-am[i]-30);
+         yp[i] = 0;
+         stx[i] = 0.02 + Math.random()/10;
+         sty[i] = 0.7 + Math.random();
+      }
+      dx[i] += stx[i];
+      document.getElementById("dot"+i).style.top=yp[i]+"px";
+      document.getElementById("dot"+i).style.left=xp[i] + am[i]*Math.sin(dx[i])+"px";  
+   }
+   snowtimer=setTimeout("DoSnow()", 10);
+}
+
+setTimeout("DoSnow()", 500);
+
+</script></div>
+
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid8">
+<div id="LayoutGrid8">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_JavaScript5" style="display:inline-block;width:100%;z-index:1;">
+<div style="color:#000000;font-size:19px;font-family:Arial;font-weight:bold;font-style:normal;text-align:center;text-decoration:none" id="basicdate"></div>
+<script>
+   var now = new Date();
+   var days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+   var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+   var date = ((now.getDate() < 10) ? "0" : "") + now.getDate();
+   var year = (now.getYear() < 1000) ? now.getYear() + 1900 : now.getYear();
+   today = days[now.getDay()] + ", " + months[now.getMonth()] + " " + date + ", " + year;
+   var basicdate = document.getElementById('basicdate');
+   basicdate.innerHTML = today;
+</script>
+
+
+
+</div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid7">
+<div id="LayoutGrid7">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_Image2" style="display:inline-block;width:322px;height:121px;z-index:2;">
+<img src="images/meeryxmas-1.png" id="Image2" alt="">
+</div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_Image1" style="display:inline-block;width:190px;height:134px;z-index:3;">
+<img src="images/newFON.png" id="Image1" alt="">
+</div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_JavaScript2" style="display:inline-block;width:100%;z-index:4;">
+<div style="color:#000000;font-size:24px;font-family:Arial;font-weight:bold;text-decoration:%underline%;animation: spinZ 4000s linear infinite;text-align:center" id="JavaScript2">
+<div class="bubbles"><div class="text">Friends of the Nation</div></div>
+</div>
+</div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid9">
+<div id="LayoutGrid9">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_JavaScript4" style="display:inline-block;width:100%;z-index:5;">
+<div style="color:#000000;font-size:24px;font-family:Arial;font-weight:bold;font-style:normal;text-align:center;text-decoration:none" id="typewriter"></div>
+<script>
+var ch = 0;
+var txt = 'WISHING YOU from our Hearts A VERY VERY Blessed Merry Christmas.....!';
+var speed = 50;
+var pause = 5000;
+
+function typeWriterInit()
+{
+   ch = 0; 
+   document.getElementById("typewriter").innerHTML = '';
+   typeWriter();
+}
+function typeWriter() 
+{
+   if (ch < txt.length) 
+   {
+      document.getElementById("typewriter").innerHTML += txt.charAt(ch);
+      ch++;
+      setTimeout(typeWriter, speed);
+   }
+   else
+   {
+      if (pause > 0)
+      {
+          setTimeout(typeWriterInit, pause);
+      }
+   }
+}
+typeWriterInit();
+</script>
+</div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<ul id="SlideShow1" style="overflow:hidden;z-index:6;">
+<li><img class="image" src="images/1.png" alt="" title=""></li>
+<li><img class="image" src="images/2.png" style="display:none;" alt="" title=""></li>
+<li><img class="image" src="images/3.png" style="display:none;" alt="" title=""></li>
+<li><img class="image" src="images/4.png" style="display:none;" alt="" title=""></li>
+<li><img class="image" src="images/5.png" style="display:none;" alt="" title=""></li>
+<li><img class="image" src="images/6.png" style="display:none;" alt="" title=""></li>
+</ul>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid6">
+<div id="LayoutGrid6">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_JavaScript3" style="display:inline-block;width:100%;z-index:7;">
+<script>
+
+/*
+RAINBOW TEXT Script by Matt Hedgecoe (c) 2002
+Featured on JavaScript Kit
+For this script, visit http://www.javascriptkit.com
+*/
+
+var text="Friends of the Nation";
+var speed=80;
+
+if (document.all||document.getElementById)
+{
+   document.write('<div style="font-family:Arial;font-size:27px;font-weight:bold;font-style:normal;text-align:center;text-decoration:none;" id="highlight">' + text + '<\/div>');
+   var storetext=document.getElementById? document.getElementById("highlight") : document.all.highlight;
+}
+else
+   document.write(text);
+
+var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0");
+var r=1;
+var g=1;
+var b=1;
+var seq=1;
+function changetext()
+{
+   rainbow="#"+hex[r]+hex[g]+hex[b];
+   storetext.style.color=rainbow;
+}
+function change()
+{
+   if (seq==6)
+   {
+      b--;
+      if (b==0)
+        seq=1;
+   }
+   if (seq==5)
+   {
+      r++;
+      if (r==12)
+         seq=6;
+   }
+   if (seq==4)
+   {
+      g--;
+      if (g==0)
+         seq=5;
+   }
+   if (seq==3)
+   {
+      b++;
+      if (b==12)
+         seq=4;
+   }
+   if (seq==2)
+   {
+      r--;
+      if (r==0)
+         seq=3;
+   }
+   if (seq==1)
+   {
+      g++;
+      if (g==12)
+         seq=2;
+   }
+   changetext();
+}
+
+function starteffect()
+{
+   if (document.all||document.getElementById)
+      flash=setInterval("change()",speed);
+}
+starteffect();
+</script>
+
+
+</div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div style="z-index:17">
+<script>
+
+/******************************************
+* Snow Effect Script- By Altan d.o.o. (http://www.altan.hr/snow/index.html)
+* Visit Dynamic Drive DHTML code library (http://www.dynamicdrive.com/) for full source code
+* Last updated Nov 9th, 05' by DD. This notice must stay intact for use
+******************************************/
+  
+var snowsrc="snow.gif"
+var no = 10;
+
+var dx, xp, yp;
+var am, stx, sty;
+var i, doc_width = 800, doc_height = 600; 
+  
+if (typeof window.innerWidth != 'undefined')
+{
+   doc_width = window.innerWidth;
+   doc_height = window.innerHeight;
+}
+else 
+if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0)
+{
+   doc_width = document.documentElement.clientWidth;
+   doc_height = document.documentElement.clientHeight;
+}
+else
+{
+   doc_width = document.getElementsByTagName('body')[0].clientWidth;
+   doc_height = document.getElementsByTagName('body')[0].clientHeight;
+}
+
+dx = new Array();
+xp = new Array();
+yp = new Array();
+am = new Array();
+stx = new Array();
+sty = new Array();
+
+for (i = 0; i < no; ++ i) 
+{  
+   dx[i] = 0;
+   xp[i] = Math.random()*(doc_width-50);
+   yp[i] = Math.random()*doc_height;
+   am[i] = Math.random()*20;
+   stx[i] = 0.02 + Math.random()/10;
+   sty[i] = 0.7 + Math.random();
+
+   if (i == 0) 
+   {
+      document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><a href=\"http://dynamicdrive.com\"><img src='"+snowsrc+"' border=\"0\"><\/a><\/div>");
+   } 
+   else 
+   {
+      document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='"+snowsrc+"' border=\"0\"><\/div>");
+   }
+}
+
+function DoSnow() 
+{
+   for (i = 0; i < no; ++ i) 
+   {
+      yp[i] += sty[i];
+      if (yp[i] > doc_height-50) 
+      {
+         xp[i] = Math.random()*(doc_width-am[i]-30);
+         yp[i] = 0;
+         stx[i] = 0.02 + Math.random()/10;
+         sty[i] = 0.7 + Math.random();
+      }
+      dx[i] += stx[i];
+      document.getElementById("dot"+i).style.top=yp[i]+"px";
+      document.getElementById("dot"+i).style.left=xp[i] + am[i]*Math.sin(dx[i])+"px";  
+   }
+   snowtimer=setTimeout("DoSnow()", 10);
+}
+
+setTimeout("DoSnow()", 500);
+
+</script></div>
+</body>
+</html>
